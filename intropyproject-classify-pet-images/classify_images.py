@@ -67,14 +67,14 @@ def classify_images(images_dir, results_dic, model):
            None - results_dic is mutable data type so no return needed.
     """
     for filename in listdir(images_dir):
-      Classifier = classifier(images_dir + "/" + filename, model).lower()
-      # print(Classifier, filename)
-      # if results_dic[filename][0] in Classifier:
-      #   compound_data = (Classifier, True)
-      # else:
-      #   compound_data = (Classifier, False)
-      compound_data = (Classifier, results_dic[filename][0] in Classifier)
+        Classifier = classifier(images_dir + "/" + filename, model).lower()
+        # print(Classifier, filename)
+        # if results_dic[filename][0] in Classifier:
+        #   compound_data = (Classifier, True)
+        # else:
+        #   compound_data = (Classifier, False)
+        compound_data = (Classifier, results_dic[filename][0] in Classifier)
 
-      results_dic[filename].extend(compound_data)
+        results_dic[filename].extend(compound_data)
     # print(results_dic)
 
