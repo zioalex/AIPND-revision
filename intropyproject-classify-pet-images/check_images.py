@@ -36,6 +36,7 @@ from classify_images import classify_images
 from adjust_results4_isadog import adjust_results4_isadog
 from calculates_results_stats import calculates_results_stats
 from print_results import print_results
+from print_synthetic_result import print_synthetic_result
 
 # Main program function defined below
 def main():
@@ -115,6 +116,9 @@ def main():
     # Prints summary results, incorrect classifications of dogs (if requested)
     # and incorrectly classified breeds (if requested)
     print_results(results, results_stats, in_arg.arch, True, True)
+
+    # Print synthetic results
+    print_synthetic_result(results_stats, in_arg.arch)
 
     # TODO 0: Measure total program runtime by collecting end time
     end_time = time()

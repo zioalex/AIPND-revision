@@ -324,5 +324,15 @@ Incorrect classified Dog breed Golden_retriever_05182.jpg
 Incorrect classified Dog breed Boston_terrier_02285.jpg
 Incorrect classified Dog breed Golden_retriever_05257.jpg
 Incorrect classified Dog breed Beagle_01141.jpg
+-------------------------------
+|       # Total Images |  40  |
+|         # Dog Images |  30  |
+|   # Not-a-Dog Images |  10  |
+-------------------------------
+------------------------------------------------------------------------------------------------------
+| CNN Model Architecture: | % Not-a-Dog Correct | % Dogs Correct | % Breeds Correct | % Match Labels |
+------------------------------------------------------------------------------------------------------
+|                 alexnet |               100.0 |          100.0 |             80.0 |           75.0 |
+------------------------------------------------------------------------------------------------------
 
-** Total Elapsed Runtime: 0:0:2
+** Total Elapsed Runtime: 0:0:4

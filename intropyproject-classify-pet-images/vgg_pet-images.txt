@@ -320,5 +320,15 @@ Used Model: vgg - Number of images 40 - Number of Not-A Dog images 10
 % Correct Dogs: 100.0 - % Correct Breed: 93.33333333333333 - % Correct Not-a Dog: 100.0 - % Match 87.5
 Incorrect classified Dog breed Great_pyrenees_05367.jpg
 Incorrect classified Dog breed Beagle_01170.jpg
+-------------------------------
+|       # Total Images |  40  |
+|         # Dog Images |  30  |
+|   # Not-a-Dog Images |  10  |
+-------------------------------
+------------------------------------------------------------------------------------------------------
+| CNN Model Architecture: | % Not-a-Dog Correct | % Dogs Correct | % Breeds Correct | % Match Labels |
+------------------------------------------------------------------------------------------------------
+|                     vgg |               100.0 |          100.0 | 93.33333333333333 |           87.5 |
+------------------------------------------------------------------------------------------------------
 
-** Total Elapsed Runtime: 0:0:30
+** Total Elapsed Runtime: 0:0:33
