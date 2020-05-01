@@ -22,5 +22,5 @@ def print_synthetic_result(results_stats_dic, model):
     print("-" * len_stats_len)
     print("| {} | {} | {} | {} | {} |".format("CNN Model Architecture:", "% Not-a-Dog Correct", "% Dogs Correct", "% Breeds Correct", "% Match Labels"))
     print("-" * len_stats_len)
-    print("| {0:>{1}} | {2:>{3}} | {4:>{5}} | {6:>{7}} | {8:>{9}} |".format(model, len_stats_coln1, results_stats_dic['pct_correct_notdogs'], len_stats_coln2, results_stats_dic['pct_correct_dogs'], len_stats_coln3, results_stats_dic['pct_correct_breed'], len_stats_coln4, results_stats_dic['pct_match'], len_stats_coln5))
+    print("| {0:>{1}} | {2:>{3}} | {4:>{5}} | {6:>{7}} | {8:>{9}} |".format(model, len_stats_coln1, round(results_stats_dic['pct_correct_notdogs'], 1), len_stats_coln2, round(results_stats_dic['pct_correct_dogs'], 1), len_stats_coln3, round(results_stats_dic['pct_correct_breed'], 1), len_stats_coln4, round(results_stats_dic['pct_match'], 1), len_stats_coln5))
     print("-" * len_stats_len)
