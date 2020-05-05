@@ -72,15 +72,13 @@ def print_results(results_dic, results_stats_dic, model,
             for key in results_dic.keys():
                 if sum(results_dic[key][3:]) == 1:
                     print("Incorrect classified Dogs: ", key)
-      else:
-        print("No incorrect classified Dogs")
-
+        else:
+            print("No incorrect classified Dogs")
 
     if print_incorrect_breed:
-      if results_stats_dic['pct_correct_breed'] != 100:
-        for key in results_dic.keys():
-          if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
-            print("Incorrect classified Dog breed", key)
-      else:
-        print("No incorrect classified Dogs breed")
-
+        if results_stats_dic['pct_correct_breed'] != 100:
+            for key in results_dic.keys():
+                if sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0:
+                    print("Incorrect classified Dog breed", key)
+        else:
+            print("No incorrect classified Dogs breed")
