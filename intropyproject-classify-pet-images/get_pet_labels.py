@@ -46,6 +46,7 @@ def get_pet_labels(image_dir):
     results_dic = dict()
     filenames = listdir(image_dir)
     for filename in filenames:
-      cleaned_name = re.sub('[0-9]*.jpg', '', filename).rstrip(" _").replace("_", " ").lower()
-      results_dic[filename] = [ cleaned_name ]
+        if not filename.startswith('.'):
+            cleaned_name = re.sub('[0-9]*.jpg', '', filename).rstrip(" _").replace("_", " ").lower()
+            results_dic[filename] = [ cleaned_name ]
     return results_dic
