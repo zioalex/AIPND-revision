@@ -30,6 +30,13 @@ from os import listdir
 #       results_dic dictionary that is passed into the function is a mutable
 #       data type so no return is needed.
 #
+
+def bool2int(boolean):
+        if boolean:
+            return 1
+        else:
+            return 0
+
 def classify_images(images_dir, results_dic, model):
     """
     Creates classifier labels with classifier function, compares pet labels to
@@ -73,7 +80,7 @@ def classify_images(images_dir, results_dic, model):
         #   compound_data = (Classifier, True)
         # else:
         #   compound_data = (Classifier, False)
-        compound_data = (Classifier, results_dic[filename][0] in Classifier)
+        compound_data = (Classifier, bool2int(results_dic[filename][0] in Classifier))
 
         results_dic[filename].extend(compound_data)
     # print(results_dic)
