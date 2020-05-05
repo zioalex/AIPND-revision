@@ -41,8 +41,8 @@ def get_input_args():
     # Replace None with parser.parse_args() parsed argument collection that
     # you created with this function
     parser = argparse.ArgumentParser(description="Get classifier input")
-    parser.add_argument('--dir', type=str, default='pet_images')
-    parser.add_argument('--arch', type=str, default='vgg')
-    parser.add_argument('--dogfile', type=str, default='dognames.txt')
+    parser.add_argument('--dir', type=str, default='pet_images', help='Dogs image dir')
+    parser.add_argument('--arch', type=str, default='vgg', help='Model to use')
+    parser.add_argument('--dogfile', type=str, default='dognames.txt', help='Dogname file list')
 
     return parser.parse_args()
