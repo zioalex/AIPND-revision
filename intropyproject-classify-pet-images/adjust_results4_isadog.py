@@ -67,12 +67,24 @@ def adjust_results4_isadog(results_dic, dogfile):
     Returns:
            None - results_dic is mutable data type so no return needed.
     """
+    dogname_dic = {}
     with open(dogfile, "r") as dogfile_fh:
-      doglist = dogfile_fh.read().splitlines()
+        # doglist = dogfile_fh.read().splitlines()
+        # line = dogfile_fh.readline()
+
+        for line in dogfile_fh.read().splitlines():
+            clean_name = line.rstrip()
+            if clean_name not in dogname_dic:
+              dogname_dic[clean_name] = 1
+
+    def bool2int(boolean):
+        if boolean:
+            return 1
+        else:
+            return 0
 
     for key in results_dic.keys():
-      is_a_dog = ( results_dic[key][0] in doglist, results_dic[key][1] in doglist )
-      results_dic[key].extend(is_a_dog)
-
+        is_a_dog = (bool2int(results_dic[key][0] in dogname_dic), bool2int(results_dic[key][1] in dogname_dic))
+        results_dic[key].extend(is_a_dog)
 
     # print(results_dic)
