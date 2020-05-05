@@ -68,10 +68,10 @@ def print_results(results_dic, results_stats_dic, model,
     print("% Correct Dogs: {} - % Correct Breed: {} - % Correct Not-a Dog: {} - % Match {}".format(results_stats_dic['pct_correct_dogs'], results_stats_dic['pct_correct_breed'], results_stats_dic['pct_correct_notdogs'], results_stats_dic['pct_match']) )
 
     if print_incorrect_dogs:
-      if results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs'] == results_stats_dic['n_images']:
-        for key in results_dic.keys():
-          if sum(results_dic[key][3:]) == 1:
-            print("Incorrect classified Dogs: ", key)
+        if results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs'] != results_stats_dic['n_images']:
+            for key in results_dic.keys():
+                if sum(results_dic[key][3:]) == 1:
+                    print("Incorrect classified Dogs: ", key)
       else:
         print("No incorrect classified Dogs")
 
